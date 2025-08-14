@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Star, Zap, Heart, Globe, ChevronDown } from 'react-feather'; // or your icon lib
 import { motion } from 'framer-motion';
-import { staggerContainer, fadeInUp, scaleIn, slideIn } from '@/lib/motion';
+import { staggerContainer, fadeInUp, scaleIn} from '@/lib/motion';
 
 const HeroSection: React.FC = () => {
   const heroRef = useRef<HTMLElement>(null);
@@ -80,7 +80,7 @@ const HeroSection: React.FC = () => {
           </motion.div>
 
           <motion.p variants={fadeInUp} className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Full Stack Developer with 4+ years' experience in React.js, Next.js, Node.js, Firebase, and Tailwind CSS. Skilled in building high-performance UIs, REST/GraphQL APIs, and scalable hybrid apps. BS in AI with focus on cloud integration, backend architecture, automation, and Python scripting.
+            Full Stack Developer/Next.js with 4+ years experience in React.js, Next.js, Node.js, Firebase, and Tailwind CSS. Skilled in building high-performance UIs, REST/GraphQL APIs, and scalable hybrid apps. BS in AI with focus on cloud integration, backend architecture, automation, and Python scripting.
           </motion.p>
 
           <motion.div variants={staggerContainer} className="space-x-6 flex justify-center flex-wrap gap-4">

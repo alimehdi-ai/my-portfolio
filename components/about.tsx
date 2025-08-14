@@ -116,7 +116,7 @@ const AboutSection: React.FC = () => {
                   </span>{" "}
                   in{" "}
                   <span className="font-bold text-transparent bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text">
-                    full-stack development
+                    full-stack development/Next.js
                   </span>
                   , I specialize in creating{" "}
                   <span className="font-bold text-transparent bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text">
