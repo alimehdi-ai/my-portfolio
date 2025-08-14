@@ -7,7 +7,7 @@ import Stats from "./stats";
 import { 
   staggerContainer, 
   fadeInUp, 
-  fadeIn, 
+
   scaleIn, 
   slideIn, 
   staggerItem,
@@ -38,7 +38,7 @@ const ContactSection: React.FC = () => {
           variants={fadeInUp}
           className="text-5xl font-bold text-center mb-20 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
         >
-          Let's Work Together
+          Let&apos;s Work Together
         </motion.h2>
 
         <div className="grid lg:grid-cols-2 gap-16">
@@ -52,7 +52,7 @@ const ContactSection: React.FC = () => {
                 Get In Touch
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              I&apos;m always interested in new opportunities and exciting projects. Let's discuss how we can bring your
+              I&apos;m always interested in new opportunities and exciting projects. Let&apos;s discuss how we can bring your
                 ideas to life and create something amazing together. Feel free to reach out via email, phone, or LinkedIn.
               </p>
             </motion.div>
