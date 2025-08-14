@@ -6,6 +6,7 @@ type ExperienceItem = {
   position: string;
   period: string;
   description: string;
+  shortDescription: string; // Shorter description for smaller screens
   color: string; // Tailwind gradient classes like 'from-blue-500 to-purple-500'
 };
 
@@ -21,7 +22,7 @@ const ExperienceSection: React.FC = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.05 }
     );
 
     const element = document.getElementById('experience');
@@ -42,6 +43,7 @@ const ExperienceSection: React.FC = () => {
       position: "Software Engineer",
       period: "Dec 2024 - Present",
       description: "Built 3+ full-stack apps with React, Next.js, and 15+ reusable Redux components. Integrated Firebase Auth/Firestore and scalable REST APIs for 10,000+ users. Automated deployments with GitHub Actions & Vercel, reducing delivery time by 25%. Improved responsive UI/UX using Tailwind CSS, Material UI, and CMS integration.",
+      shortDescription: "Built 3+ full-stack apps with React & Next.js. Integrated Firebase and REST APIs for 10,000+ users. Automated deployments",
       color: "from-blue-500 to-purple-500"
     },
     {
@@ -49,6 +51,7 @@ const ExperienceSection: React.FC = () => {
       position: "Python Engineer",
       period: "Aug 2023 - Sep 2024",
       description: "Automated 20+ backend data pipelines with Python, Pandas, and NumPy. Increased efficiency by 30% using FastAPI, multithreading, and REST API optimization. Integrated third-party APIs and deployed robust error-handling utilities. Collaborated in Agile teams of 6+ developers using Trello, GitHub, and CI/CD workflows.",
+      shortDescription: "Automated 20+ data pipelines with Python & Pandas. Increased efficiency by 30% using FastAPI. Collaborated in Agile",
       color: "from-purple-500 to-pink-500"
     },
     {
@@ -56,6 +59,7 @@ const ExperienceSection: React.FC = () => {
       position: "React Developer",
       period: "Jul 2020 - Jul 2023",
       description: "Built 10+ responsive UIs using React, Next.js, and Tailwind CSS. Optimized async data handling with React Query, improving performance by 40%. Developed modular components with form validation using Yup and React Hook Form. Delivered scalable features within global Agile teams using GitHub and Trello.",
+      shortDescription: "Built 10+ responsive UIs with React & Next.js. Optimized performance by 40% with React Query. Developed modular",
       color: "from-pink-500 to-red-500"
     }
   ];
@@ -152,7 +156,8 @@ const ExperienceSection: React.FC = () => {
                         {exp.period}
                       </p>
                       <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        {exp.description}
+                        <span className="hidden md:block">{exp.description}</span>
+                        <span className="block md:hidden">{exp.shortDescription}</span>
                       </p>
                     </div>
                   </motion.div>
