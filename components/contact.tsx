@@ -52,7 +52,7 @@ const ContactSection: React.FC = () => {
                 Get In Touch
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your
+              I&apos;m always interested in new opportunities and exciting projects. Let's discuss how we can bring your
                 ideas to life and create something amazing together. Feel free to reach out via email, phone, or LinkedIn.
               </p>
             </motion.div>
