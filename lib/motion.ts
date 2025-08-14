@@ -1,7 +1,8 @@
 // Reusable Framer Motion variants and helpers
-import { Variants } from 'framer-motion';
+import { Variants, cubicBezier } from 'framer-motion';
 
-export const easing: number[] = [0.22, 1, 0.36, 1];
+// Use cubicBezier for TypeScript safety
+export const easing = cubicBezier(0.22, 1, 0.36, 1);
 
 export const staggerContainer: Variants = {
   hidden: {},
@@ -18,7 +19,7 @@ export const fadeInUp: Variants = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: easing },
+    transition: { duration: 0.6, ease: "easeInOut" },
   },
 };
 
@@ -57,5 +58,3 @@ export const staggerItem: Variants = {
 };
 
 export const viewportOnce = { once: true, amount: 0.15 } as const;
-
-
